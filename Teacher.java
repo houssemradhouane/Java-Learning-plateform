@@ -5,11 +5,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-
 import java.util.ArrayList;
-import java.util.Collection;
 
+@Entity
 public class Teacher {
 
      // The teacher Id
@@ -25,7 +23,7 @@ public class Teacher {
      // The email
      String email;
      // the teacher
-     @OneToMany
+     @OneToMany(mappedBy="supervisor", fetch = FetchType.EAGER)
      ArrayList<Student> students;
      // Provided courses
      @ManyToMany(mappedBy="author", fetch = FetchType.EAGER)

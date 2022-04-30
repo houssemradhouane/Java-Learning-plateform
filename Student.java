@@ -3,9 +3,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
+
 
 
 @Entity
@@ -24,10 +23,10 @@ public class Student {
     // The email
     String email;
     // the teacher
-    @ManyToOne(mappedBy="supervisor", fetch = FetchType.EAGER)
+    @ManyToOne
     Teacher teacher;
 
-    public Student(int id, String fn, String ln, String pwd, String mail) {
+    public Student() {
         super();
         this.teacher = new Teacher();
     }
