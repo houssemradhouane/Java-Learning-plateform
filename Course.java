@@ -1,9 +1,4 @@
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.util.ArrayList;
 
 @Entity
@@ -20,7 +15,8 @@ public class Course {
     cCategory course_category;
 
     // Questions related to the course
-    ArrayList<Question> course_content;
+    @OneToMany(mappedBy="course")
+    ArrayList<Question> questions;
 
     public Course() {
         super();
@@ -52,10 +48,10 @@ public class Course {
     }
 
     public ArrayList<Question> getCourse_content() {
-        return course_content;
+        return this.questions;
     }
 
     public void addCourse_content(Question course_content) {
-        this.course_content.add(course_content);
+        this.questions.add(course_content);
     }
 }

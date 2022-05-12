@@ -23,15 +23,11 @@ public class Teacher {
      // The email
      String email;
      // the teacher
-     @OneToMany(mappedBy="supervisor", fetch = FetchType.EAGER)
+     @OneToMany(mappedBy="teacher", fetch = FetchType.EAGER)
      ArrayList<Student> students;
      // Provided courses
      @ManyToMany(mappedBy="author", fetch = FetchType.EAGER)
      ArrayList<Course> courses;
-
-     public Teacher() {
-         super();
-     }
 
      //defining the getters
 
