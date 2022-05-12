@@ -1,5 +1,6 @@
 import javax.persistence.*;
-import java.util.ArrayList;
+
+import java.util.Collection;
 
 @Entity
 public class Course {
@@ -14,9 +15,12 @@ public class Course {
     // Category of the course
     cCategory course_category;
 
+    // Boolean to indicate if the course is done or not
+    Boolean done;
+
     // Questions related to the course
     @OneToMany(mappedBy="course")
-    ArrayList<Question> questions;
+    Collection<Question> questions;
 
     public Course() {
         super();
@@ -47,11 +51,19 @@ public class Course {
         this.course_category = course_category;
     }
 
-    public ArrayList<Question> getCourse_content() {
+    public Collection<Question> getCourse_content() {
         return this.questions;
     }
 
     public void addCourse_content(Question course_content) {
         this.questions.add(course_content);
+    }
+
+    public Boolean getDone() {
+        return done;
+    }
+
+    public void setDone(Boolean done) {
+        this.done = done;
     }
 }

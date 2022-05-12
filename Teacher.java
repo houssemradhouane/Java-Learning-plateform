@@ -5,7 +5,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import java.util.ArrayList;
+import java.util.Collection;
 
 @Entity
 public class Teacher {
@@ -24,10 +24,10 @@ public class Teacher {
      String email;
      // the teacher
      @OneToMany(mappedBy="teacher", fetch = FetchType.EAGER)
-     ArrayList<Student> students;
+     Collection<Student> students;
      // Provided courses
      @ManyToMany(mappedBy="author", fetch = FetchType.EAGER)
-     ArrayList<Course> courses;
+     Collection<Course> courses;
 
      //defining the getters
 
@@ -51,11 +51,11 @@ public class Teacher {
         return this.email;
     }
 
-    public ArrayList<Student> get_students() {
+    public Collection<Student> get_students() {
         return this.students;
     }
     
-    public ArrayList<Course> get_courses() {
+    public Collection<Course> get_courses() {
         return this.courses;
     }
 
