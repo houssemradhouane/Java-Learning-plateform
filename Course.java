@@ -1,3 +1,5 @@
+package src;
+
 import javax.persistence.*;
 
 import java.util.Collection;
@@ -21,6 +23,12 @@ public class Course {
     // Questions related to the course
     @OneToMany(mappedBy="course")
     Collection<Question> questions;
+
+    @OneToMany(mappedBy="course")
+    Collection<Qcm> qcms;
+
+    @OneToMany(mappedBy="course")
+    Collection<FillBlanks> fillblanks;
 
     public Course() {
         super();

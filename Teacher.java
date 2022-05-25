@@ -1,3 +1,5 @@
+package src;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -28,6 +30,10 @@ public class Teacher {
      // Provided courses
      @ManyToMany(mappedBy="author", fetch = FetchType.EAGER)
      Collection<Course> courses;
+
+    public Teacher() {
+        super();
+    }
 
      //defining the getters
 

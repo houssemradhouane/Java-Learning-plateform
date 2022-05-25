@@ -1,10 +1,10 @@
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+package src;
+
+import javax.persistence.*;
 import java.util.Collection;
 
-public class Qcm extends Question{
+@Entity
+public class Qcm{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +22,10 @@ public class Qcm extends Question{
     // The course this question belongs to
     @ManyToOne
     Course course;
+
+    public Qcm() {
+        super();
+    }
 
     // defining setters and getters
 
