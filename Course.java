@@ -30,6 +30,9 @@ public class Course {
     @OneToMany(mappedBy="course")
     Collection<FillBlanks> fillblanks;
 
+    @ManyToOne
+    Teacher author;
+
     public Course() {
         super();
     }
@@ -63,15 +66,55 @@ public class Course {
         return this.questions;
     }
 
-    public void addCourse_content(Question course_content) {
-        this.questions.add(course_content);
-    }
-
     public Boolean getDone() {
         return done;
     }
 
     public void setDone(Boolean done) {
         this.done = done;
+    }
+
+    public Collection<Question> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(Collection<Question> questions) {
+        this.questions = questions;
+    }
+
+    public Collection<Qcm> getQcms() {
+        return qcms;
+    }
+
+    public void setQcms(Collection<Qcm> qcms) {
+        this.qcms = qcms;
+    }
+
+    public Collection<FillBlanks> getFillblanks() {
+        return fillblanks;
+    }
+
+    public void setFillblanks(Collection<FillBlanks> fillblanks) {
+        this.fillblanks = fillblanks;
+    }
+
+    public Teacher getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Teacher author) {
+        this.author = author;
+    }
+
+    public void addQcm(Qcm qcm) {
+        this.getQcms().add(qcm);
+    }
+
+    public void addFillBlanks(FillBlanks fb){
+        this.getFillblanks().add(fb);
+    }
+
+    public void addQuestion(Question q) {
+        this.getQuestions().add(q);
     }
 }
