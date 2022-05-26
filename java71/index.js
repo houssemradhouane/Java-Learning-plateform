@@ -6,3 +6,5 @@ menu.addEventListener('click', function() {
     menuLinks.classList.toggle('active');
 })
 }
+/*https://stackoverflow.com/questions/62246139/how-to-create-login-authentication-client-side-using-javascript*/
+

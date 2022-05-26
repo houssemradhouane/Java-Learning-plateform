@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./getStarted.css">
+    
+    <title>Get Started</title>
     <link rel="stylesheet" href="../index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="getStarted.js"></script>
 </head>
 <body>
  <div class="nav-container">
@@ -24,6 +29,25 @@
          </ul>
      </nav>
  </div>
-    <h1 style="margin-top: 90px; margin-left: 50%;">Get Started</h1>
+    
+    <!-- login form-->
+    <div class="login-form">
+        <form action="">
+            <h3>login</h3>
+            <label for="cars"> <h2>Account Type</h2></label>
+            <select id="typec" name="accountType" class="box">
+                <option value="student" selected>Student</option>
+                <option value="teacher">Teacher</option>
+            </select>
+            <input type="email" placeholder="username" class="box">
+            <input type="password" placeholder="password" class="box">
+            <p>forget password ? <a href="#">click here</a></p>
+            <p>don't have an account ? <a href="./register.html">register now</a></p>
+            <input type="submit" class="btn" value="login">
+            <i class="fas fa-times"></i>
+
+        </form>
+    </div>
+
 </body>
 </html>
