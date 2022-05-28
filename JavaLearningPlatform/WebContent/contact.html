@@ -1,0 +1,74 @@
+<html>
+   <head>
+      <script src="contact.js"> 
+         /*Put the JavaScript code here*/
+      </script> 
+     <link rel="stylesheet" href="contact.css">
+     <link rel="stylesheet" href="./index.css">
+   </head>
+   <body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <h1 id="navbar-logo">JAVA7</h1>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li><a href="./about.html" class="nav-link">About</a></li>
+                <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                <li><a href="./getStarted.html" class="nav-link nav-links-btn">Get Started</a></li>
+            </ul>
+        </nav>
+    </div>
+       <div class="contact">
+      <h1>Contact Us</h1>
+      <form name="myForm" action="/file.php" onsubmit="return validateForm()" method="post">
+         <table class="form-style">
+            <tr>
+               <td>
+                  <label>
+                     Your name <span class="required">*</span>
+                  </label>
+               </td>
+               <td>
+                  <input type="text" name="name" class="long"/>
+                  <span class="error" id="errorname"></span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <label>
+                    Your email address <span class="required">*</span>
+                  </label>
+               </td>
+               <td>
+                  <input type="email" name="email" class="long"/>
+                  <span class="error" id="erroremail"></span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <label>
+                     Message <span class="required">*</span>
+                  </label>
+               </td>
+               <td>
+                  <textarea name="message" class="long field-textarea"></textarea>
+                  <span class="error" id="errormsg"></span>
+               </td>
+            </tr>
+            <tr>
+               <td></td>
+               <td>
+                  <input type="submit" value="Send">      
+                  <input type="reset" value="Reset"> 
+               </td>
+            </tr>
+         </table>
+      </form>
+    </div>
+   </body>
+</html>
