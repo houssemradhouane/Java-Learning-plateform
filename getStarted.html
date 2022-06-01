@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./getStarted.css">
     
     <title>Get Started</title>
-    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="./index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="getStarted.js"></script>
 </head>
@@ -22,7 +22,7 @@
              <span class="icon-bar"></span>
          </div>
          <ul class="nav-menu">
-             <li><a href="/" class="nav-link">Home</a></li>
+             <li><a href="./index.html" class="nav-link">Home</a></li>
              <li><a href="./about.html" class="nav-link">About</a></li>
              <li><a href="./contact.html" class="nav-link">Contact</a></li>
              <li><a href="./getStarted.html" class="nav-link nav-links-btn">Get Started</a></li>
@@ -32,7 +32,8 @@
     
     <!-- login form-->
     <div class="login-form">
-        <form action="">
+        <form action="Servlet" method="get">
+        	<input type="hidden" name="op" value="login">
             <h3 class="title">Login</h3>
             <label for="cars"> <h2 class="subtitle">Account Type</h2></label>
             <select id="typec" name="accountType" class="input-box">
@@ -41,11 +42,11 @@
             </select>
             <div class="input-box">
                 <span class="details">Username/Email</span>
-                <input type="email" placeholder="Enter your email" required>
+                <input type="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="input-box">
                 <span class="details">Password</span>
-                <input type="password" placeholder="Enter your password" required>
+                <input type="password" name="password" placeholder="Enter your password" required>
             </div>
             <div class="help"> <a href="#">Forgot password ?</a></div>
             <div class="help">Don't have an account ? &nbsp;<a href="./register.html">Register now</a></div>
