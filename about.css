@@ -1,0 +1,25 @@
+body{
+    background: linear-gradient(135deg, #5f676d, #d6d4d6);
+    height: 100vh;
+}
+
+.about-us{
+       
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Verdana',sans-serif;
+    
+  }
+
+.texte {
+    padding-left: 25vh;
+    padding-right: 25vh;
+    display: flex;
+    text-align: center;
+    justify-items: center;
+}
+
+.title{
+    text-align: center;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./getStarted.css">
+    
+    <title>Get Started</title>
+    <link rel="stylesheet" href="../index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="getStarted.js"></script>
+</head>
+<body>
+ <div class="nav-container">
+     <nav class="navbar">
+         <h1 id="navbar-logo">JAVA7</h1>
+         <div class="menu-toggle" id="mobile-menu">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </div>
+         <ul class="nav-menu">
+             <li><a href="/" class="nav-link">Home</a></li>
+             <li><a href="./about.html" class="nav-link">About</a></li>
+             <li><a href="./contact.html" class="nav-link">Contact</a></li>
+             <li><a href="./getStarted.html" class="nav-link nav-links-btn">Get Started</a></li>
+         </ul>
+     </nav>
+ </div>
+    
+    <!-- login form-->
+    <div class="login-form">
+        <form action="">
+            <h3 class="title">Login</h3>
+            <label for="cars"> <h2 class="subtitle">Account Type</h2></label>
+            <select id="typec" name="accountType" class="input-box">
+                <option value="student" selected>Student</option>
+                <option value="teacher">Teacher</option>
+            </select>
+            <div class="input-box">
+                <span class="details">Username/Email</span>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Password</span>
+                <input type="password" placeholder="Enter your password" required>
+            </div>
+            <div class="help"> <a href="#">Forgot password ?</a></div>
+            <div class="help">Don't have an account ? &nbsp;<a href="./register.html">Register now</a></div>
+            <div class="button">
+                <input type="submit" class="btn" value="Login">
+                <i class="fas fa-times"></i>
+            </div>
+            
+            
+
+        </form>
+    </div>
+
+</body>
+</html>
