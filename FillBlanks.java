@@ -1,6 +1,5 @@
 package src;
 
-import javafx.util.Pair;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -11,14 +10,17 @@ public class FillBlanks {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
-    // The text of the question
+    // The text ozf the question
     String question_text;
 
     // The number of blanks to fill
     int blanks;
 
     // Options to fill the blanks in correct order
-    Collection<Pair<Integer,String>> correct_options;
+    String foption;
+    String soption;
+    String toption;
+    String fooption;
 
     // The course the question belongs to
     @ManyToOne
@@ -52,15 +54,40 @@ public class FillBlanks {
         this.blanks = blanks;
     }
 
-    public Collection<Pair<Integer, String>> getCorrect_options() {
-        return correct_options;
-    }
 
-    public void setCorrect_options(Collection<Pair<Integer, String>> correct_options) {
-        this.correct_options = correct_options;
-    }
+    public String getFoption() {
+		return foption;
+	}
 
-    public Course getCourse() {
+	public void setFoption(String foption) {
+		this.foption = foption;
+	}
+
+	public String getSoption() {
+		return soption;
+	}
+
+	public void setSoption(String soption) {
+		this.soption = soption;
+	}
+
+	public String getToption() {
+		return toption;
+	}
+
+	public void setToption(String toption) {
+		this.toption = toption;
+	}
+
+	public String getFooption() {
+		return fooption;
+	}
+
+	public void setFooption(String fooption) {
+		this.fooption = fooption;
+	}
+
+	public Course getCourse() {
         return course;
     }
 
@@ -68,8 +95,4 @@ public class FillBlanks {
         this.course = course;
     }
 
-    public void addCorrect_option(int blank_num,String correct_option){
-        Pair<Integer,String> noption = new Pair(blank_num,correct_option);
-        this.getCorrect_options().add(noption);
-    }
 }
