@@ -1,3 +1,5 @@
+package src;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -21,71 +23,61 @@ public class Teacher {
      // The password
      String password;
      // The email
-     String email;
+     String username;
      // the teacher
      @OneToMany(mappedBy="teacher", fetch = FetchType.EAGER)
      Collection<Student> students;
      // Provided courses
      @ManyToMany(mappedBy="author", fetch = FetchType.EAGER)
      Collection<Course> courses;
-
-     //defining the getters
-
-    public int get_id() {
-        return this.teacher_id;
-    }
-
-    public String get_firstname() {
-        return this.first_name;
-    }
-
-    public String get_lastname() {
-        return this.last_name;
-    }
-
-    public String get_password() {
-        return this.password;
-    }
-
-    public String get_email() {
-        return this.email;
-    }
-
-    public Collection<Student> get_students() {
-        return this.students;
-    }
-    
-    public Collection<Course> get_courses() {
-        return this.courses;
-    }
-
-    //defining the setters
-
-    public void set_id(int id) {
-        this.teacher_id = id;
-    }
-
-    public void set_firstname(String fn) {
-        this.first_name = fn;
-    }
-
-    public void set_lastname(String ln) {
-        this.last_name = ln;
-    }
-
-    public void set_password(String pwd) {
-        this.password = pwd;
-    }
-
-    public void set_email(String mail) {
-        this.email = mail;
-    }
+	public int getTeacher_id() {
+		return teacher_id;
+	}
+	public void setTeacher_id(int teacher_id) {
+		this.teacher_id = teacher_id;
+	}
+	public String getFirst_name() {
+		return first_name;
+	}
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
+	}
+	public String getLast_name() {
+		return last_name;
+	}
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public Collection<Student> getStudents() {
+		return students;
+	}
+	public void setStudents(Collection<Student> students) {
+		this.students = students;
+	}
+	public Collection<Course> getCourses() {
+		return courses;
+	}
+	public void setCourses(Collection<Course> courses) {
+		this.courses = courses;
+	}
 
     public void add_student(Student s) {
-        this.students.add(s);
+    	this.getStudents().add(s);
     }
-
+    
     public void add_course(Course c) {
-        this.courses.add(c);
+    	this.getCourses().add(c);
     }
 }

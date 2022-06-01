@@ -1,3 +1,6 @@
+package src;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -21,9 +24,9 @@ public class Student {
     // The password
     String password;
     // The email
-    String email;
+    String username;
     // the teacher
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     Teacher teacher;
 
     public Student() {
@@ -31,55 +34,54 @@ public class Student {
         this.teacher = new Teacher();
     }
 
-    //defining the getters
+	public int getStudent_id() {
+		return student_id;
+	}
 
-    public int get_id() {
-        return this.student_id;
-    }
+	public void setStudent_id(int student_id) {
+		this.student_id = student_id;
+	}
 
-    public String get_firstname() {
-        return this.first_name;
-    }
+	public String getFirst_name() {
+		return first_name;
+	}
 
-    public String get_lastname() {
-        return this.last_name;
-    }
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
+	}
 
-    public String get_password() {
-        return this.password;
-    }
+	public String getLast_name() {
+		return last_name;
+	}
 
-    public String get_email() {
-        return this.email;
-    }
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
+	}
 
-    public Teacher get_teacher() {
-        return this.teacher;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    //defining the setters
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public void set_id(int id) {
-        this.student_id = id;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public void set_firstname(String fn) {
-        this.first_name = fn;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public void set_lastname(String ln) {
-        this.last_name = ln;
-    }
+	public Teacher getTeacher() {
+		return teacher;
+	}
 
-    public void set_password(String pwd) {
-        this.password = pwd;
-    }
+	public void setTeacher(Teacher teacher) {
+		this.teacher = teacher;
+	}
 
-    public void set_email(String mail) {
-        this.email = mail;
-    }
-
-    public void set_teacher(Teacher t) {
-        this.teacher = t;
-    }
 }
+
+    

@@ -1,10 +1,10 @@
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+package src;
+
+import javax.persistence.*;
 import java.util.Collection;
 
-public class Qcm extends Question{
+@Entity
+public class Qcm{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,15 +13,19 @@ public class Qcm extends Question{
     // The text of the question
     String question;
 
-    // The correct answers
-    Collection<String> correct_options;
+    // The options
+    String coption;
+    String fwoption;
+    String swoption;
 
-    // The wrong answers
-    Collection<String> wrong_options;
 
     // The course this question belongs to
     @ManyToOne
     Course course;
+
+    public Qcm() {
+        super();
+    }
 
     // defining setters and getters
 
@@ -41,23 +45,31 @@ public class Qcm extends Question{
         this.question = question;
     }
 
-    public Collection<String> getCorrect_options() {
-        return correct_options;
-    }
+    public String getCoption() {
+		return coption;
+	}
 
-    public void setCorrect_options(Collection<String> correct_option) {
-        this.correct_options = correct_option;
-    }
+	public void setCoption(String coption) {
+		this.coption = coption;
+	}
 
-    public Collection<String> getWrong_options() {
-        return wrong_options;
-    }
+	public String getFwoption() {
+		return fwoption;
+	}
 
-    public void setWrong_options(Collection<String> wrong_options) {
-        this.wrong_options = wrong_options;
-    }
+	public void setFwoption(String fwoption) {
+		this.fwoption = fwoption;
+	}
 
-    public Course getCourse() {
+	public String getSwoption() {
+		return swoption;
+	}
+
+	public void setSwoption(String swoption) {
+		this.swoption = swoption;
+	}
+
+	public Course getCourse() {
         return course;
     }
 
@@ -65,11 +77,4 @@ public class Qcm extends Question{
         this.course = course;
     }
 
-    public void addWrong_option(String wrong_option){
-        this.getWrong_options().add(wrong_option);
-    }
-
-    public void addCorrect_option(String correct_option){
-        this.getCorrect_options().add(correct_option);
-    }
 }
