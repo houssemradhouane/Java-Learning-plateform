@@ -23,29 +23,29 @@
             </ul>
         </nav>
     </div>
-       <div class="contact">
+    <div class="contact">
       <h1>Contact Us</h1>
       <form name="myForm" action="/file.php" onsubmit="return validateForm()" method="post">
          <table class="form-style">
             <tr>
                <td>
                   <label>
-                     Your name <span class="required">*</span>
+                     Name <span class="required">*</span>
                   </label>
                </td>
                <td>
-                  <input type="text" name="name" class="long"/>
+                  <input type="text" placeholder="Enter your name" name="name" class="long"/>
                   <span class="error" id="errorname"></span>
                </td>
             </tr>
             <tr>
                <td>
                   <label>
-                    Your email address <span class="required">*</span>
+                    Email <span class="required">*</span>
                   </label>
                </td>
                <td>
-                  <input type="email" name="email" class="long"/>
+                  <input type="email" placeholder="Enter your email" name="email" class="long"/>
                   <span class="error" id="erroremail"></span>
                </td>
             </tr>
@@ -56,15 +56,17 @@
                   </label>
                </td>
                <td>
-                  <textarea name="message" class="long field-textarea"></textarea>
+                  <textarea name="message" placeholder="Write your message" class="long field-textarea"></textarea>
                   <span class="error" id="errormsg"></span>
                </td>
             </tr>
             <tr>
                <td></td>
                <td>
+                  <div class="button">
                   <input type="submit" value="Send">      
-                  <input type="reset" value="Reset"> 
+                  <input class="reset-button" type="reset" value="Reset"> 
+                  </div>
                </td>
             </tr>
          </table>

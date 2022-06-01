@@ -2,8 +2,9 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./register.css">
 <link rel="stylesheet" href="../index.css">
+<link rel="stylesheet" href="./register.css">
+
 
 </head>
 <body>
@@ -27,19 +28,41 @@
  <!-- login form-->
  <div class="login-form">
     <form action="/action_page.php">
-        <h3>Register</h3>
-        <label for="cars"> <h2>Account Type</h2></label>
-        <select id="typec" name="accountType" class="box">
+        <h3 class="title">Register</h3>
+        <label for="cars"> <h2 class="subtitle">Account Type</h2></label>
+        <select id="typec" name="accountType" class="input-box">
             <option value="student" selected>Student</option>
             <option value="teacher">Teacher</option>
         </select>
-        <input type="text" placeholder="Enter Name" class="box" required>
+
+
+
+        <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" required>
+        </div>
+        <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" required>
+        </div>
+
+        <!-- <input type="text" placeholder="Enter Name" class="box" required>
         <input type="email" placeholder="Enter Email" class="box" required>
         <input type="password" placeholder="Enter password" class="box" required>
-        <input type="password" placeholder="Repeat password" class="box" required>
+        <input type="password" placeholder="Repeat password" class="box" required> -->
 
-        <p>Already have an account? <a href="./getStarted.html">sign in</a></p>
-        <input type="submit" class="btn" value="register">
+        <div class="help">Already have an account ?  &nbsp;<a href="./getStarted.html">Sign in</a></div>
+        <div class="button">
+            <input type="submit" value="Register">
+        </div>
         <i class="fas fa-times"></i>
 
     </form>

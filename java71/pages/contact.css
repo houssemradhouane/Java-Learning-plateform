@@ -1,6 +1,17 @@
+.contact{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Verdana',sans-serif;
+}
+
 h1{
     text-align: center;
   }
+  
+
+
+
   
   .form-style {
     margin:10px auto;
@@ -27,13 +38,13 @@ h1{
     color:red;
   }
   .form-style input[type=submit], .form-style input[type=reset]{
-    background: #4eb5f1;
+    background: #535353;
     padding: 8px 15px 8px 15px;
     border: none;
     color: #fff;
   }
   .form-style input[type=submit]:hover, .form-style input[type=reset]:hover{
-    background: #4eb5f1;
+    background: linear-gradient(135deg, #5f676d, #d6d4d6);
     box-shadow:none;
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
@@ -63,10 +74,10 @@ h1{
   .form-style input[type=text]:focus, 
   .form-style input[type=email]:focus,
   .form-style textarea:focus{
-    -moz-box-shadow: 0 0 8px #88D5E9;
-    -webkit-box-shadow: 0 0 8px #88D5E9;
-    box-shadow: 0 0 8px #88D5E9;
-    border: 1px solid #88D5E9;
+    -moz-box-shadow: 0 0 8px #535353;
+    -webkit-box-shadow: 0 0 8px #535353;
+    box-shadow: 0 0 8px #535353;
+    border: 1px solid #535353;
   }
   .error{
     color: #D8000C;
@@ -74,13 +85,40 @@ h1{
   }
 
   .contact {
-      background-color: aqua;
       margin-top: 20px;
       padding-top: 80px;
     
       height: 100px;
   }
   body {
-    background-color: aqua;
+    background: linear-gradient(135deg, #5f676d, #d6d4d6);;
     height: 100%;
   }
+
+  form .button{
+    height: 50px;
+    margin: 35px 0
+  }
+  form .button input{
+    
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #d6d6d6, #a0a0a0);
+  }
+  form .button input:hover{
+   transform: scale(0.98);
+   background: linear-gradient(-135deg, #d6d6d6, #a0a0a0);
+   }
+  @media(max-width: 584px){
+  .login-form{
+   max-width: 100%;
+ }
+  }
+
+  
